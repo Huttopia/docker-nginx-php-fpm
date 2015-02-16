@@ -12,7 +12,7 @@ help:
 	@echo "   4.  make logs     - Print logs container"
 	@echo "   5.  make stop     - Stop container"
 	@echo "   6.  make remove   - Remove container"
-	@echo "   7.  make bash     - Launch container bash"
+	@echo "   7.  make enter    - Enter in bash to container"
 	@echo ""
 
 # Manage
@@ -26,7 +26,7 @@ start:
 
 state:
 	@echo "$(step) Current state $(step)"
-	@docker ps -a | grep huttosoft-web
+	@docker ps -a | grep huttosoft-nginx-php-fpm
 
 logs:
 	@echo "$(step) Logs $(step)"
@@ -40,6 +40,5 @@ remove: stop
 	@echo "$(step) Removing $(step)"
 	@docker rm huttosoft-nginx-php-fpm
 
-bash:
-	@echo "$(step) Starting bash $(step)"
-	@docker run --name huttosoft-nginx-php-fpm --rm -it huttopia/nginx-php-fpm:latest bash
+enter:
+	@docker-enter huttosoft-nginx-php-fpm
