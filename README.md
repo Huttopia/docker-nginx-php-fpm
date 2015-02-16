@@ -3,10 +3,9 @@
 ### Quick start
 
 ```bash
-docker run --name=deezer
+docker run --name=huttopia-nginx-php-fpm
     -d
     -it
     -v /path/to/hosts:/etc/apche2/sites-enabled
-    -v /path/to/.ssh:/root/.ssh
     huttopia/nginx-php-fpm:latest
 ```
