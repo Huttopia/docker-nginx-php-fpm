@@ -34,6 +34,9 @@ RUN sed -i "s/;listen.allowed_clients = 127.0.0.1/listen.allowed_clients = 0.0.0
 RUN sed -i "s/^user\s*=.*/user = root/" /etc/php5/fpm/pool.d/www.conf
 RUN sed -i "s/^group\s*=.*/group = root/" /etc/php5/fpm/pool.d/www.conf
 
+# Alias sf
+RUN echo "alias sf='php bin/console'" >> /root/.bashrc
+
 EXPOSE 80
 EXPOSE 443
 
