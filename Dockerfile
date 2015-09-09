@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     sudo \
     curl \
     git \
+    locate \
+    vim \
     php5-dev \
     php5-cli \
     php5-xdebug \
