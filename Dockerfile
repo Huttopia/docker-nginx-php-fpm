@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     git \
     locate \
     vim \
+    mcrypt \
     php5-dev \
     php5-cli \
     php5-xdebug \
@@ -27,6 +28,7 @@ RUN apt-get update && apt-get install -y \
     php5-apcu \
     php5-mysql \
     php5-gd \
+    php5-mcrypt \
     php-pear \
     nginx
 
